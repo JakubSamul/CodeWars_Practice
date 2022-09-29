@@ -227,14 +227,170 @@
 
 # print(duplicate_count("abcbaddea"))
 
-def two_sum(numbers, target):
-    result = []
-    for i, x in enumerate(numbers):
-        for j, y in enumerate(numbers):
-            summ = x + y
-            if summ == target and i != j:
-                result += i, j
-                return result
+# def two_sum(numbers, target):
+#     result = []
+#     for i, x in enumerate(numbers):
+#         for j, y in enumerate(numbers):
+#             summ = x + y
+#             if summ == target and i != j:
+#                 result += i, j
+#                 return result
 
 
-print(two_sum([1, 5, 3], 4))
+# print(two_sum([1, 5, 3], 4))
+
+# def accum(s):
+#     ss = ""
+#     a = 1
+#     for i in s:
+#         b = i*a
+#         ss += b.capitalize() + "-"
+#         a += 1
+#     print(ss[0:-1])
+
+
+# print(accum("kolsksa"))
+
+# def sort_by_length(arr):
+#     l = len(arr)
+#     for j in range(0, l-1):
+#         if len(arr[j]) > len(arr[j+1]):
+#             arr[j], arr[j+1] = arr[j+1], arr[j]
+#         return arr
+
+
+# print(sort_by_length(["beg", "life", "i", "to"]))
+
+# def fu():
+#     print("abcd")
+
+
+# def bar(*args, **kwargs):
+#     print(args, kwargs)
+
+
+# fu()
+# bar(Wojtek="Wojtek jest super")
+# # fu("Kuba jest super")
+# bar("sas", "asfss")
+# bar()
+
+
+# def six(*args):
+#     if args:
+#         return eval(f"6{args[0]}")
+#     else:
+#         return "6"
+
+
+# def plus(wal):
+#     return f"+{wal}"
+
+
+# print(six(plus(six())))
+# # wynik = eval(six(plus(six())))
+
+# # print(wynik)
+# # print(eval("2+8+15"))
+
+
+# def diamond(n):
+#     result = ""
+#     result1 = ""
+#     a = "*"
+#     s = " "
+#     if n % 2 == 0 and n <= 0:
+#         return None
+#     else:
+#         for i in range(1, n+1, 2):
+#             step = int((n/2)-(i/2))
+#             result += f"{s*step}{a*i}\n"
+#         for i in range(n-2, 0, -2):
+#             step = int((n/2)-(i/2))
+#             result1 += f"{s*step}{a*i}\n"
+#         return result + result1
+
+
+# print(diamond(7))
+
+# def gimme(input_array):
+#     ip = []
+#     for element in input_array:
+#         ip.append(element)
+#         for i in range(len(ip)):
+#             for j in range(0, len(ip)-i-1):
+#                 if ip[j] > ip[j+1]:
+#                     ip[j], ip[j+1] = ip[j+1], ip[j]
+#     a = ip[1]
+#     return input_array.index(a)
+
+
+# print(gimme([2, 3, 1]))
+
+# def is_valid_walk(walk):
+#     w = 0
+#     if len(walk) == 10:
+#         for i in walk:
+#             if i == 'n' or i == 'e':
+#                 w += 1
+#             elif i == 's' or i == 'w':
+#                 w -= 1
+#         if w == 0 and walk.count('n') == walk.count('s') and walk.count('e') == walk.count('w'):
+#             return True
+#         else:
+#             return False
+#     else:
+#         return False
+
+
+# print(is_valid_walk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
+
+# def nb_dig(n, d):
+#     l = []
+#     re = []
+#     r = 0
+#     for i in range(0, n):
+#         a = i*i
+#         b = list(str(a))
+#         for ii in range(0, len(b)):
+#             if b[ii] == 0:
+#                 r += 1
+#     print(r)
+
+
+# nb_dig(100, 0)
+
+# a = 2010
+# b = list(str(a))
+
+# print(b[2])
+
+# def remove_url_anchor(url):
+#     result = url.split("#")
+#     return result[0]
+
+
+# print(remove_url_anchor("www.codewars.com#about"))
+
+
+# def high(x):
+#     a = x.split(" ")
+#     res = []
+#     for i in a:
+#         r = 0
+#         for j in i:
+#             k = ord(j) - 96
+#             r += k
+#         res.append(r)
+#     result = []
+#     for c in res:
+#         result.append(c)
+#     for num in range(len(result)):
+#         for numm in range(0, len(result)-num-1):
+#             if result[numm] < result[numm+1]:
+#                 result[numm], result[numm+1] = result[numm+1], result[numm]
+#     inde = a[res.index(result[0])]
+#     return inde
+
+
+# print(high('man i need a taxi up to ubud'))
