@@ -15,3 +15,15 @@
 
 
 # print(series_sum(32))
+
+# Get the Middle Character
+
+# def get_middle(s):
+#     l = int(len(s) / 2)
+#     if len(s) % 2 == 0:
+#         return s[l-1:l+1]
+#     else:
+#         return s[l]
+
+
+# print(get_middle("testtest"))
