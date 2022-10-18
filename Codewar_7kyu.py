@@ -27,3 +27,21 @@
 
 
 # print(get_middle("testtest"))
+
+# Maximum Length Difference
+
+# s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+# s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
+
+# def mxdiflg(a1, a2):
+#     result = []
+#     if a1 != [] and a2 != []:
+#         for x in a1:
+#             for y in a2:
+#                 z = abs(len(x)-len(y))
+#                 result.append(z)
+#         return max(result)
+#     else:
+#         return -1
+
+# print(mxdiflg(s1,s2))
