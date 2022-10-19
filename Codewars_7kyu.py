@@ -48,3 +48,23 @@
 #             result += text
 #     return result
 # print(reverse_letter("ultr53o?n"))
+
+
+
+# # Check the exam
+# a = ["a", "a", "b", "b"]
+# b = ["a", "c", "b", "d"]
+# def check_exam(arr1,arr2):
+#     count = 0 
+#     for i in range(0,len(arr1)):
+#         if arr1[i] == arr2[i] and arr2[i] != "":
+#             count += 4
+#         elif arr1[i] != arr2[i] and arr2[i] != "":
+#             count -= 1
+#         else:
+#             count += 0
+#     if count < 0:
+#         return 0
+#     else:
+#         return count
+# print(check_exam(a,b))
