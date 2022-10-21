@@ -97,3 +97,19 @@
 #                         count += 1
 #     return count    
 # print(count_smileys((b)))
+
+
+
+# Break camelCase
+# a = "asddKkokaoIijoaIklnk"
+# def solution(s):
+#     index = 0
+#     result = []
+#     for i in range(index,len(s)):
+#         if s[i] == s[i].upper():
+#             b = s[index:i]
+#             result.append(b)
+#             index = s.index(s[i],i-1,len(s))
+#     result.append(s[index:len(s)])
+#     return " ".join(result)
+# print(solution(a))
