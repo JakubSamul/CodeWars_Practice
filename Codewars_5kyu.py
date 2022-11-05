@@ -29,3 +29,15 @@
 #             res.append(i)
 #     return res
 # print(dirReduc(a))
+
+
+#  String incrementer
+a = "foobar23"
+def increment_string(strng):
+    result = strng.rstrip("0123456789")
+    l = strng[len(result):]
+    if l == "": 
+        return strng+"1"
+    else:
+        return result + str(int(l) + 1).zfill(len(l))
+print(increment_string(a))

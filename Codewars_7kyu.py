@@ -68,3 +68,46 @@
 #     else:
 #         return count
 # print(check_exam(a,b))
+
+
+
+# # Alternate capitalization
+# a = "abcdef"
+# b = "abracadabra"
+# def capitalize(s):
+#     for i in range(0,len(s),2):
+#         s[i] = s[i].upper()
+#         print(s)
+# print(capitalize(a))
+
+
+
+# a = [1,2,3,4,3,3,5,1,0]
+# print(set(a))
+
+
+class A:
+    def __init__(self, val):
+        self.val = val
+
+    def __eq__(self, target):
+        return self.val == target.val
+
+    def __lt__(self, target):
+        return self.val == target.val
+
+    def __gt__(self, target):
+        return self.val == target.val
+ 
+ 
+from collections import Counter
+
+
+
+a = 'asdasdasdasdas'
+
+def zad(a):
+    result = Counter(a)
+    return result.most_common()[0]
+
+print(zad(a))
