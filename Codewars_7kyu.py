@@ -86,28 +86,19 @@
 # print(set(a))
 
 
-class A:
-    def __init__(self, val):
-        self.val = val
 
-    def __eq__(self, target):
-        return self.val == target.val
-
-    def __lt__(self, target):
-        return self.val == target.val
-
-    def __gt__(self, target):
-        return self.val == target.val
- 
- 
-from collections import Counter
-
-
-
-a = 'asdasdasdasdas'
-
-def zad(a):
-    result = Counter(a)
-    return result.most_common()[0]
-
-print(zad(a))
+# Row Weights
+# def row_weights(array):
+#     if len(array) == 1:
+#         return (array[0],0)
+#     elif len(array) == 2:
+#         return (array[0], array[1])
+#     else:
+#         res1 = 0
+#         res2 = 0
+#         for i in range(0,len(array),2):
+#             res1 += array[i]
+#         for i in range(1,len(array),2):
+#             res2 += array[i]
+#         return (res1,res2)
+# print(row_weights([29,83,67,53,19,28,96]))
