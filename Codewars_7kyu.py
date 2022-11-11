@@ -121,3 +121,11 @@
 #         result += i.capitalize() + ' '
 #     return result[0:-1]
 # print(to_jaden_case(a))
+
+
+
+# Sum of angles
+# def angle(n):
+#     if n >= 3:
+#         return (n-2) * 180
+# print(angle(4))
