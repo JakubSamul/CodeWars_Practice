@@ -109,3 +109,15 @@
 # def solution(string, ending):
 #     return string.endswith(ending)
 # print(solution('abcde', 'cde'))
+
+
+
+#Jaden Casing Strings
+# a = "How can mirrors be real if our eyes aren't real"
+# def to_jaden_case(string):
+#     result = ''
+#     string1 = string.split()
+#     for i in string1:
+#         result += i.capitalize() + ' '
+#     return result[0:-1]
+# print(to_jaden_case(a))
