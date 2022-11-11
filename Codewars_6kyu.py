@@ -134,3 +134,17 @@
 #     print(res)
 #     return res
 # print(tower_builder(6))
+
+
+
+# Tortoise racing
+# def race(v1, v2, g):
+#     if v1 >= v2:
+#         return None
+#     else:
+#         r = g * ( 3600 / ( v2 - v1 ))
+#         s = int(r % 60)
+#         m = int(r % 3600 / 60)
+#         h = int(r / 3600)
+#     return [h, m, s]
+# print(race(720,850,70))
