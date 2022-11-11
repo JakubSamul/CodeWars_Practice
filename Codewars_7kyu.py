@@ -102,3 +102,10 @@
 #             res2 += array[i]
 #         return (res1,res2)
 # print(row_weights([29,83,67,53,19,28,96]))
+
+
+
+#String ends with?
+# def solution(string, ending):
+#     return string.endswith(ending)
+# print(solution('abcde', 'cde'))
