@@ -142,3 +142,15 @@
 #         result += n2
 #     return result
 # print(row_sum_odd_numbers(13))
+
+
+
+# Sorted? yes? no? how?
+# def is_sorted_and_how(arr):
+#     if arr == sorted(arr):
+#         return 'yes, ascending'
+#     elif arr == sorted(arr)[::-1]:
+#         return 'yes, descending'
+#     else:
+#         return 'no'
+# print(is_sorted_and_how([9,6,4,3,1,0]))
