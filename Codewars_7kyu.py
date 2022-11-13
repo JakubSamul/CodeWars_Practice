@@ -129,3 +129,16 @@
 #     if n >= 3:
 #         return (n-2) * 180
 # print(angle(4))
+
+
+
+# Sum of old numbers
+# def row_sum_odd_numbers(n):
+#     n1 = n * (n-1) + 1
+#     result = 0
+#     result += n1
+#     for i in range(1,n):
+#         n2 = n1 + i * 2
+#         result += n2
+#     return result
+# print(row_sum_odd_numbers(13))
