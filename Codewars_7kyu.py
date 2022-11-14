@@ -154,3 +154,17 @@
 #     else:
 #         return 'no'
 # print(is_sorted_and_how([9,6,4,3,1,0]))
+
+
+
+# Bumps in the Road
+# def bumps(road):
+#     result = 0
+#     for i in range(0,len(road)):
+#         if road[i] == "n":
+#             result += 1
+#     if result > 15:
+#         return 'Car Dead'
+#     else:
+#         return "Woohoo!"
+# print(bumps("_nnnnnnn_n__n______nn__nn_nnn"))
