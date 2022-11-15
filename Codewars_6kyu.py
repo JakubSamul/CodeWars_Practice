@@ -148,3 +148,24 @@
 #         h = int(r / 3600)
 #     return [h, m, s]
 # print(race(720,850,70))
+
+
+
+# Data Reverse
+# data1 = [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
+# data2 = [1,0,1,0,1,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1]
+# def data_reverse(data):
+#     result = []
+#     s = []
+#     final = []
+#     for i in range(0,len(data)):
+#         s.append(data[i])
+#         if len(s) == 8:
+#             result.append(s)
+#             s = []
+#     result = result[::-1]
+#     for i in result:
+#         for a in i:
+#             final.append(a)
+#     return final
+# print(data_reverse(data1))
