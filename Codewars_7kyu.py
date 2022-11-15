@@ -79,9 +79,6 @@
 #         s[i] = s[i].upper()
 #         print(s)
 # print(capitalize(a))
-
-
-
 # a = [1,2,3,4,3,3,5,1,0]
 # print(set(a))
 
