@@ -20,17 +20,36 @@
 
 
 # Simple Encryption #1 - Alternating Split
-# def encrypt(encrypted_text, n):
-#     for i in str(n):
+# def decrypt(text, n):
+#     if n <= 0 or not text:
+#         return text
+#     text = list(text)
+#     l = len(text)
+#     for i in range(n):
+#         text_a = list(text[0:l//2])
+#         text_b = list(text[l//2:l])
+#         for j in range(1,l,2):
+#             k = text_a.pop(0)
+#             text_b.insert(j,k)
+#         text = text_b
+#     return "".join(text_b)
+            
+# def encrypt(text, n):
+#     if n <= 0:
+#         return text
+#     text = list(text)
+#     for i in range(n):
 #         step1 = []
 #         step2 = []
-#         for step in range(1,len(encrypted_text)+1,2):
-#             step1.append(encrypted_text[step])
-#         for step in range(0,len(encrypted_text)+1,2):
-#             step2 += encrypted_text[step]
-#     print(step1)
-
+#         for i in range(len(text)):
+#             if i % 2 == 0:
+#                 step2.append(text[i])
+#             else:
+#                 step1.append(text[i])
+#         text = "".join(step1+step2)
+#     return text
 # print(encrypt("This is a test!", 1))
+# print(decrypt("hsi  etTi sats!", 1))
 
 
 
