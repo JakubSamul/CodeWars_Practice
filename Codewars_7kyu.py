@@ -165,3 +165,9 @@
 #     else:
 #         return "Woohoo!"
 # print(bumps("_nnnnnnn_n__n______nn__nn_nnn"))
+
+
+
+# JavaScript Array Filter
+# def get_even_numbers(arr):
+#     return list(filter(lambda x: x%2 == 0, arr)) 

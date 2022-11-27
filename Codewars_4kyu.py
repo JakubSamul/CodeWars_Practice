@@ -28,3 +28,9 @@
 #         data = data.strip('/')
 #     return data
 # print(mix(a1,a2))
+
+
+
+
+
+
