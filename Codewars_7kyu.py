@@ -171,3 +171,13 @@
 # JavaScript Array Filter
 # def get_even_numbers(arr):
 #     return list(filter(lambda x: x%2 == 0, arr)) 
+
+
+
+# Flatten and sort an array
+# def flatten_and_sort(array):
+# 	result=[]
+# 	for a in array:
+# 		for x in a:
+# 			result.append(x)
+# 	return sorted(result)
