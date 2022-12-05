@@ -181,3 +181,9 @@
 # 		for x in a:
 # 			result.append(x)
 # 	return sorted(result)
+
+
+
+# No oddities here
+# def no_odds(values):
+#     return [value for value in values if value % 2 == 0]
