@@ -187,3 +187,15 @@
 # No oddities here
 # def no_odds(values):
 #     return [value for value in values if value % 2 == 0]
+
+
+
+# Parts of a list
+# def partlist(arr):
+#     result = []
+#     for e,i in enumerate(arr):
+#         if e == len(arr)-1:
+#             break
+#         else:
+#             result.append((" ".join(arr[:e+1]), " ".join(arr[e+1:])))
+#     return result
