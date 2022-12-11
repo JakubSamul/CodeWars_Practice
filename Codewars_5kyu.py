@@ -58,3 +58,20 @@
 #     '$'            # end line
 # )
 # regex1="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^\W_]{6,}$"
+
+
+
+# Maximum subarray sum
+# def max_sequence(arr):
+#     max = 0
+#     max_1 = 0
+#     for i in arr:
+#         if max_1 > 0:
+#             max_1 += i
+#             if max_1 < 0:
+#                 max_1 = 0
+#             elif max_1 > max:
+#                 max = max_1
+#         elif i > 0:
+#             max_1 += i
+#     return max
