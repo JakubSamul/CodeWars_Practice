@@ -199,3 +199,17 @@
 #         else:
 #             result.append((" ".join(arr[:e+1]), " ".join(arr[e+1:])))
 #     return result
+
+
+
+# Even numbers in an array
+# def even_numbers(arr,n):
+#     result = []
+#     for i in arr[::-1]:
+#         if i % 2 == 0:
+#             result.append(i)
+#             if len(result) == n:
+#                 break
+#     return result[::-1]
+# print(even_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3))
+# print(even_numbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2))
