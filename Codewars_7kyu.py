@@ -213,3 +213,12 @@
 #     return result[::-1]
 # print(even_numbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3))
 # print(even_numbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2))
+
+
+
+# Vowel Count
+# def get_count(sentence):
+#     num_vowels = 0
+#     for vow in ["a", "e", "i", "o", "u"]:
+#         num_vowels += sentence.count(vow)
+#     return num_vowels
