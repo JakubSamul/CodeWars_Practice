@@ -222,3 +222,12 @@
 #     for vow in ["a", "e", "i", "o", "u"]:
 #         num_vowels += sentence.count(vow)
 #     return num_vowels
+
+
+
+# Odd or Even?
+# def odd_or_even(arr):
+#     if sum(arr) % 2 == 0:
+#         return "even"
+#     else:
+#         return "odd"
