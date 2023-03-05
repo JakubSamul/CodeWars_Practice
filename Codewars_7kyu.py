@@ -231,3 +231,12 @@
 #         return "even"
 #     else:
 #         return "odd"
+
+
+
+# Reverse words
+# def reverse_words(text):
+#     result = []
+#     for word in text.split(" "):
+#         result.append(word[::-1])
+#     return " ".join(result)
