@@ -240,3 +240,9 @@
 #     for word in text.split(" "):
 #         result.append(word[::-1])
 #     return " ".join(result)
+
+
+
+# Greet Me
+# def greet(name): 
+#     return 'Hello {}!'.format(name.title())
