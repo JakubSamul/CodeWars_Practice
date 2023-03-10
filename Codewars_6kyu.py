@@ -212,3 +212,10 @@
 #     for k,v in vow.items():
 #         st = st.replace(v, k)
 #     return st
+
+
+
+# Replace With Alphabet Position
+# def alphabet_position(text):
+#     alp = "abcdefghijklmnopqrstuvwxyz"
+#     return " ".join([str(alp.find(c) + 1) for c in text.lower() if c in alp])
