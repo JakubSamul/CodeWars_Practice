@@ -252,3 +252,15 @@
 # Round up to the next multiple of 5
 # def round_to_next5(n):
 #     return n + (5 - n) % 5
+
+
+
+# Factorial
+# def factorial(n):
+#     result = 1
+#     if n < 0 or n > 12:
+#         raise ValueError('Value Error')
+#     else:
+#         for i in range(1, n+1):
+#             result *= i
+#         return result
