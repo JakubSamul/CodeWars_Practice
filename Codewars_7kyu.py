@@ -264,3 +264,9 @@
 #         for i in range(1, n+1):
 #             result *= i
 #         return result
+
+
+
+# Number of People in the Bus
+# def number(bus_stops):
+#     return sum([i[0] - i[1] for i in bus_stops])
