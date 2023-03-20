@@ -225,3 +225,31 @@
 # Duplicate Encoder
 # def duplicate_encode(word):
 #     return "".join(["(" if word.lower().count(x) == 1 else ")" for x in word.lower()])
+
+
+
+# Consonant value
+# import string
+# def solve(s):
+#     alpha_dict = {}
+#     i = 0
+#     for letter in string.ascii_lowercase:
+#         i += 1
+#         alpha_dict[letter] = i
+#     list_word = []
+#     temp =''
+#     for letter in s:
+#         if letter not in 'aeiou':
+#             temp += letter
+#         else:
+#             list_word.append(temp)
+#             temp = ''
+#     if '' in list_word:
+#         list_word.remove('')
+#     word_value = []
+#     for word in list_word:
+#         temp = 0
+#         for letter in word:
+#             temp += alpha_dict[letter]
+#         word_value.append(temp)
+#     return max(word_value)
