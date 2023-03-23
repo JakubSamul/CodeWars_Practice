@@ -270,3 +270,11 @@
 # Number of People in the Bus
 # def number(bus_stops):
 #     return sum([i[0] - i[1] for i in bus_stops])
+
+
+
+# Shortest Word
+# def find_short(s):
+#     words = s.split(' ')
+#     words.sort(key=len)
+#     return len(words[0])
