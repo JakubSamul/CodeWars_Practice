@@ -269,3 +269,9 @@
 #             index = i
 #     return ''.join(strarr[index: index + k])
 # assert longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], 2) == "abigailtheta"
+
+
+
+# Count characters in your string
+# def count(s):
+#     return {c:s.count(c) for c in s}
