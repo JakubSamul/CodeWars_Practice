@@ -278,3 +278,14 @@
 #     words = s.split(' ')
 #     words.sort(key=len)
 #     return len(words[0])
+
+
+
+# Remove the minimum
+# def remove_smallest(numbers):
+#     new_list = numbers.copy()
+#     if len(new_list) < 1 :
+# 	    return numbers
+#     else:
+# 	    new_list.remove(min(new_list))
+#     return new_list
