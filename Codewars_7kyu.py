@@ -289,3 +289,15 @@
 #     else:
 # 	    new_list.remove(min(new_list))
 #     return new_list
+
+
+# Deodorant Evaporator
+# def evaporator(content, evap_per_day, threshold):
+#     evap = evap_per_day / 100
+#     content = 1
+#     thres = threshold / 100
+#     result = 0
+#     while content > thres:
+#         content = content * (1 - evap)
+#         result += 1
+#     return result
