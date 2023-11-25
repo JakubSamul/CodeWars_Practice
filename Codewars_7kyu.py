@@ -301,3 +301,15 @@
 #         content = content * (1 - evap)
 #         result += 1
 #     return result
+
+
+# Small enough? - Beginner
+# def small_enough(array, limit):
+#     to_much = 0
+#     for i in array:
+#         if i > limit:
+#             to_much += 1
+#     if to_much > 0 :
+#         return False
+#     else:
+#         return True
