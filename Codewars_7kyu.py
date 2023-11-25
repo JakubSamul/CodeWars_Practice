@@ -313,3 +313,11 @@
 #         return False
 #     else:
 #         return True
+
+
+# Anagram Detection
+# # write the function is_anagram
+# def is_anagram(test, original):
+#     if sorted(test.lower()) != sorted(original.lower()):
+#         return False
+#     return True
