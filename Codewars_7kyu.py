@@ -321,3 +321,15 @@
 #     if sorted(test.lower()) != sorted(original.lower()):
 #         return False
 #     return True
+
+
+# Find the vowels
+# def vowel_indices(word):
+#     word = word.lower()
+#     num_vowels = []
+#     c = 1
+#     for i in range(0,len(word)):
+#         if word[i] in ["a", "e", "i", "o", "u", "y"]:
+#             num_vowels.append(c)
+#         c += 1
+#     return num_vowels
