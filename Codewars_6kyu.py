@@ -304,3 +304,24 @@
 #         if len(result) < 1 or not i == result[len(result) - 1]:
 #             result.append(i)
 #     return result
+
+
+
+# Highest Rank Number in an Array
+# a = [12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10]
+# def highest_rank(arr):
+#     arr.sort()
+#     arr1 = {}
+#     for i in arr:
+#         arr1[i] = 0
+#     for j in arr:
+#         same = 0
+#         for k in arr:
+#             if j == k:
+#                 same += 1
+#         arr1[j] = same
+#     arr2 = sorted(arr1.items(), key = lambda x: x[1])
+#     result = arr2[-1]
+#     return result[0]
+                
+# print(highest_rank(a))
