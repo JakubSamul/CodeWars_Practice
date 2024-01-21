@@ -325,3 +325,21 @@
 #     return result[0]
                 
 # print(highest_rank(a))
+
+
+
+# Fibonacci, Tribonacci and friends
+# a = [0, 1]
+# def xbonacci(signature, n):
+#     if n == 0:
+#         return []
+#     elif len(signature) >= n:
+#         return signature[0:n]
+#     else:
+#         l = len(signature)
+#         for i in range(0,n - len(signature)):
+#             add = sum(signature[-l:])
+#             signature.append(add)
+#             print(signature)
+#         return signature
+# print(xbonacci(a, 10))
