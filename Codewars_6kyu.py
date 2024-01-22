@@ -343,3 +343,17 @@
 #             print(signature)
 #         return signature
 # print(xbonacci(a, 10))
+
+
+
+# Multiplication table
+# def multiplication_table(size):
+#     result = []
+#     for i in range(1,size+1):
+#         step = []
+#         for j in range(1, size+1):
+#             step.append(i*j)
+#         result.append(step)
+#     return result
+
+# print(multiplication_table(3))
