@@ -365,3 +365,13 @@ def oper(fct, s):
 # print(vert_mirror("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
 # print(hor_mirror("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
 print(oper(vert_mirror,s))
+
+
+
+# Convert an array of strings to array of numbers
+# def to_float_array(arr): 
+#     result = []
+#     for number in arr:
+#         result.append(float(number))
+#     return result
+        
