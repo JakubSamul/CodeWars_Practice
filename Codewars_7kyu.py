@@ -344,27 +344,27 @@
 
 
 # Moves in squared strings (I)
-s = "abcd\nefgh\nijkl\nmnop"
+# s = "abcd\nefgh\nijkl\nmnop"
 
-def vert_mirror(strng):
-    result =[]
-    for i in strng.split('\n'):
-        result.append(i[::-1])
-    return '\n'.join(result)
+# def vert_mirror(strng):
+#     result =[]
+#     for i in strng.split('\n'):
+#         result.append(i[::-1])
+#     return '\n'.join(result)
         
     
-def hor_mirror(strng):
-    result =[]
-    for i in strng.split('\n'):
-        result.append(i)
-    return '\n'.join(result[::-1])
+# def hor_mirror(strng):
+#     result =[]
+#     for i in strng.split('\n'):
+#         result.append(i)
+#     return '\n'.join(result[::-1])
     
-def oper(fct, s):
-    return fct(s)
+# def oper(fct, s):
+#     return fct(s)
 
-# print(vert_mirror("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
-# print(hor_mirror("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
-print(oper(vert_mirror,s))
+# # print(vert_mirror("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
+# # print(hor_mirror("hSgdHQ\nHnDMao\nClNNxX\niRvxxH\nbqTVvA\nwvSyRu"))
+# print(oper(vert_mirror,s))
 
 
 
@@ -375,3 +375,12 @@ print(oper(vert_mirror,s))
 #         result.append(float(number))
 #     return result
         
+
+
+# Sort the Gift Code
+# def sort_gift_code(code):
+#     code = list(code)
+#     result = ""
+#     for i in sorted(code):
+#         result += i
+#     return result
