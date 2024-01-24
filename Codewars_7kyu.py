@@ -384,3 +384,15 @@
 #     for i in sorted(code):
 #         result += i
 #     return result
+
+
+
+# Most digits
+# a = [8, 900, 500, 891]
+# def find_longest(arr):
+#     sort_arr = sorted(arr)
+#     l = len(str(sort_arr[-1]))
+#     for i in arr:
+#         if len(str(i)) == l:
+#             return i 
+# print(find_longest(a))
