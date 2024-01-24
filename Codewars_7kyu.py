@@ -396,3 +396,21 @@
 #         if len(str(i)) == l:
 #             return i 
 # print(find_longest(a))
+
+
+
+# Fix string case
+# a = 'asdKJHJKHKasdJKHKHKJH'
+# def solve(s):
+#     lower = 0
+#     upper = 0
+#     for i in s:
+#         if i.isupper():
+#             upper += 1
+#         else:
+#             lower +=1
+#     if upper > lower:
+#         return s.upper()
+#     else:
+#         return s.lower()
+# print(solve(a))
