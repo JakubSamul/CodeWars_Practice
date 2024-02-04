@@ -75,3 +75,27 @@
 #         elif i > 0:
 #             max_1 += i
 #     return max
+
+
+
+# Rot13
+# a = 'abcdefghijklmnopqrstuvwxyz'
+# def rot13(message):
+#     result = ''
+#     for i in message:
+#         if i.islower():
+#             if ord(i)+13 >= 123:
+#                 result += chr(ord(i)+13-26)
+#             else:
+#                 result += chr(ord(i)+13)
+#         elif i.isupper():
+#             j = i.lower()
+#             if ord(j)+13 >= 123:
+#                 result += chr(ord(j)+13-26).upper()
+#             else:
+#                 result += chr(ord(j)+13).upper()
+#         else:
+#             result += i
+#     return result
+
+# print(rot13(a))
