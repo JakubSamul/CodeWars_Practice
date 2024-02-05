@@ -99,3 +99,26 @@
 #     return result
 
 # print(rot13(a))
+
+
+
+# Gap in Primes
+def gap(g, m, n):
+    primes_number = []
+    for num in range(m,n+1):
+        number_of_dividers = 0
+        for divider in range(1,num+1):
+            if num % divider == 0:
+                number_of_dividers += 1
+            if number_of_dividers > 2:
+                break
+        if number_of_dividers == 2:
+            primes_number.append(num)
+    for i in range(0,len(primes_number)-1):
+        if primes_number[i+1] - primes_number[i] == g:
+            return [primes_number[i], primes_number[i+1]]
+    return None
+
+print(gap(8,300,400))
+print(gap(6,100,110))
+print(gap(10,300,400))
