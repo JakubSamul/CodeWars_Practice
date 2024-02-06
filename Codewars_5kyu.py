@@ -107,16 +107,16 @@ def gap(g, m, n):
     primes_number = []
     for num in range(m,n+1):
         number_of_dividers = 0
-        for divider in range(1,num+1):
+        for divider in range(1,int(num/2)):
             if num % divider == 0:
                 number_of_dividers += 1
-            if number_of_dividers > 2:
+            if number_of_dividers > 1:
                 break
-        if number_of_dividers == 2:
+        if number_of_dividers == 1:
             primes_number.append(num)
-    for i in range(0,len(primes_number)-1):
-        if primes_number[i+1] - primes_number[i] == g:
-            return [primes_number[i], primes_number[i+1]]
+        if len(primes_number) > 1:
+            if primes_number[-1]-primes_number[-2] == g:
+                return [primes_number[-2],primes_number[-1]]
     return None
 
 print(gap(8,300,400))
