@@ -103,22 +103,31 @@
 
 
 # Gap in Primes
-def gap(g, m, n):
-    primes_number = []
-    for num in range(m,n+1):
-        number_of_dividers = 0
-        for divider in range(1,int(num/2)):
-            if num % divider == 0:
-                number_of_dividers += 1
-            if number_of_dividers > 1:
-                break
-        if number_of_dividers == 1:
-            primes_number.append(num)
-        if len(primes_number) > 1:
-            if primes_number[-1]-primes_number[-2] == g:
-                return [primes_number[-2],primes_number[-1]]
-    return None
+def prime(i):
+    if i <=0 or i == 1:
+        return False
+    j = 2
+    while(j <= i ** 0.5):
+        if i % j ==0:
+            return False
+        j += 1
+    return True
 
+def gap(g, m, n):
+    number = 0
+    result = 0
+    for i in range(m,n+1):
+        if prime(i):
+            if number == 0:
+                number = i
+            elif result == 0:
+                result = i
+            else:
+                number = result
+                result = i
+        if result - number == g:
+            return [number, result]
+    return None
 print(gap(8,300,400))
-print(gap(6,100,110))
+print(gap(2,100,110))
 print(gap(10,300,400))
