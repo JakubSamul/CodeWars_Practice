@@ -414,3 +414,14 @@
 #     else:
 #         return s.lower()
 # print(solve(a))
+
+
+# Summing a numbers digits
+def sum_digits(number):
+    sum = 0
+    for i in str(number):
+        if i == '-':
+            continue
+        sum += int(i)
+    return sum
+print(sum_digits(-111111))
