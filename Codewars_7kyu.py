@@ -417,11 +417,27 @@
 
 
 # Summing a numbers digits
-def sum_digits(number):
-    sum = 0
-    for i in str(number):
-        if i == '-':
-            continue
-        sum += int(i)
-    return sum
-print(sum_digits(-111111))
+# def sum_digits(number):
+#     sum = 0
+#     for i in str(number):
+#         if i == '-':
+#             continue
+#         sum += int(i)
+#     return sum
+# print(sum_digits(-111111))
+
+
+# # Divide and Conquer
+# def div_con(arr):
+#     total_non_string = 0
+#     total_string = 0
+
+#     for item in arr:
+#         if isinstance(item, int):
+#             total_non_string += item
+#         elif isinstance(item, str):
+#             total_string += int(item)
+
+#     return total_non_string - total_string
+# a = ['5', '0', 9, 3, 2, 1, '9', 6, 7]
+# print(div_con(a))
