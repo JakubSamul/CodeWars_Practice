@@ -441,3 +441,15 @@
 #     return total_non_string - total_string
 # a = ['5', '0', 9, 3, 2, 1, '9', 6, 7]
 # print(div_con(a))
+
+
+# Ordered Count of Characters
+# def ordered_count(input_string):
+#     char_counts = {}
+#     for char in input_string:
+#         if char in char_counts:
+#             char_counts[char] += 1
+#         else:
+#             char_counts[char] = 1
+#     char_count_tuples = [(char, count) for char, count in char_counts.items()]
+#     return char_count_tuples
