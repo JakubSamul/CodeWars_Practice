@@ -378,24 +378,15 @@
 def rev_rot(str, sz):
     if sz <= 0 or not str:
         return ""
-
     if sz > len(str):
         return ""
-
     modified_chunks = []
-
-    # Iterate through the string, cutting it into chunks of size sz
     for i in range(0, len(str), sz):
         chunk = str[i:i+sz]
         if len(chunk) == sz:
-            # Calculate the sum of the cubes of the digits
             digit_sum = sum(int(digit)**3 for digit in chunk)
-
-            # Modify the chunk based on whether the sum is divisible by 2
             if digit_sum % 2 == 0:
-                modified_chunks.append(chunk[::-1])  # Reverse the chunk
+                modified_chunks.append(chunk[::-1]) 
             else:
-                modified_chunks.append(chunk[1:] + chunk[0])  # Rotate the chunk to the left by one position
-
-    # Return the modified chunks as a single string
+                modified_chunks.append(chunk[1:] + chunk[0])  
     return ''.join(modified_chunks)
