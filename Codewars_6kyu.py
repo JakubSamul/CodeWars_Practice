@@ -18,7 +18,6 @@
 # print(title_case('First a of in', ''))
 
 
-
 # Simple Encryption #1 - Alternating Split
 # def decrypt(text, n):
 #     if n <= 0 or not text:
@@ -33,7 +32,7 @@
 #             text_b.insert(j,k)
 #         text = text_b
 #     return "".join(text_b)
-            
+
 # def encrypt(text, n):
 #     if n <= 0:
 #         return text
@@ -50,7 +49,6 @@
 #     return text
 # print(encrypt("This is a test!", 1))
 # print(decrypt("hsi  etTi sats!", 1))
-
 
 
 # Help the bookseller !
@@ -78,7 +76,6 @@
 # print(stock_list(b,c))
 
 
-
 # Find the odd int
 # a = [20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]
 # def find_it(seq):
@@ -98,7 +95,6 @@
 # print(find_it(a))
 
 
-
 # Count the smiley faces!
 # a = [':)',':(',':D',':O',':;']
 # b = [':D',':~)',';~D',':)']
@@ -114,9 +110,8 @@
 #                 if i[1] == "-" or i[1] == "~":
 #                     if i[2] == ")" or i[2] == "D":
 #                         count += 1
-#     return count    
+#     return count
 # print(count_smileys((b)))
-
 
 
 # Break camelCase
@@ -132,7 +127,6 @@
 #     result.append(s[index:len(s)])
 #     return " ".join(result)
 # print(solution(a))
-
 
 
 # Build Tower
@@ -155,7 +149,6 @@
 # print(tower_builder(6))
 
 
-
 # Tortoise racing
 # def race(v1, v2, g):
 #     if v1 >= v2:
@@ -167,7 +160,6 @@
 #         h = int(r / 3600)
 #     return [h, m, s]
 # print(race(720,850,70))
-
 
 
 # Data Reverse
@@ -190,7 +182,6 @@
 # print(data_reverse(data1))
 
 
-
 # Your order, please
 # def order(sentence):
 #     words = []
@@ -199,7 +190,6 @@
 #             if str(i) in word:
 #                 words.append(word)
 #     return " ".join(words)
-
 
 
 # The Vowel Code
@@ -214,18 +204,15 @@
 #     return st
 
 
-
 # Replace With Alphabet Position
 # def alphabet_position(text):
 #     alp = "abcdefghijklmnopqrstuvwxyz"
 #     return " ".join([str(alp.find(c) + 1) for c in text.lower() if c in alp])
 
 
-
 # Duplicate Encoder
 # def duplicate_encode(word):
 #     return "".join(["(" if word.lower().count(x) == 1 else ")" for x in word.lower()])
-
 
 
 # Consonant value
@@ -255,7 +242,6 @@
 #     return max(word_value)
 
 
-
 # Consecutive strings
 # def longest_consec(strarr, k):
 #     n = len(strarr)
@@ -271,11 +257,9 @@
 # assert longest_consec(["zone", "abigail", "theta", "form", "libe", "zas"], 2) == "abigailtheta"
 
 
-
 # Count characters in your string
 # def count(s):
 #     return {c:s.count(c) for c in s}
-
 
 
 # A Rule of Divisibility by 13
@@ -296,7 +280,6 @@
 #         n = current_sum
 
 
-
 # Unique In Order
 # def unique_in_order(sequence):
 #     result = []
@@ -304,7 +287,6 @@
 #         if len(result) < 1 or not i == result[len(result) - 1]:
 #             result.append(i)
 #     return result
-
 
 
 # Highest Rank Number in an Array
@@ -323,9 +305,8 @@
 #     arr2 = sorted(arr1.items(), key = lambda x: x[1])
 #     result = arr2[-1]
 #     return result[0]
-                
-# print(highest_rank(a))
 
+# print(highest_rank(a))
 
 
 # Fibonacci, Tribonacci and friends
@@ -345,7 +326,6 @@
 # print(xbonacci(a, 10))
 
 
-
 # Multiplication table
 # def multiplication_table(size):
 #     result = []
@@ -363,14 +343,14 @@
 # def bouncing_ball(h, bounce, window):
 #     if h <= 0 or bounce <= 0 or bounce >= 1 or window >= h:
 #         return -1
-    
+
 #     passes = 0
 #     while h > window:
 #         passes += 1
 #         h *= bounce
 #         if h > window:
 #             passes += 1
-    
+
 #     return passes
 
 
@@ -382,11 +362,11 @@ def rev_rot(str, sz):
         return ""
     modified_chunks = []
     for i in range(0, len(str), sz):
-        chunk = str[i:i+sz]
+        chunk = str[i : i + sz]
         if len(chunk) == sz:
-            digit_sum = sum(int(digit)**3 for digit in chunk)
+            digit_sum = sum(int(digit) ** 3 for digit in chunk)
             if digit_sum % 2 == 0:
-                modified_chunks.append(chunk[::-1]) 
+                modified_chunks.append(chunk[::-1])
             else:
-                modified_chunks.append(chunk[1:] + chunk[0])  
-    return ''.join(modified_chunks)
+                modified_chunks.append(chunk[1:] + chunk[0])
+    return "".join(modified_chunks)

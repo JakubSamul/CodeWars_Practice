@@ -11,7 +11,6 @@
 # print(series_sum(32))
 
 
-
 # Get the Middle Character
 # def get_middle(s):
 #     l = int(len(s) / 2)
@@ -20,7 +19,6 @@
 #     else:
 #         return s[l]
 # print(get_middle("testtest"))
-
 
 
 # Maximum Length Difference
@@ -39,7 +37,6 @@
 # print(mxdiflg(s1,s2))
 
 
-
 # Simple Fun #176: Reverse Letter
 # def reverse_letter(string):
 #     result = ""
@@ -50,12 +47,11 @@
 # print(reverse_letter("ultr53o?n"))
 
 
-
 # # Check the exam
 # a = ["a", "a", "b", "b"]
 # b = ["a", "c", "b", "d"]
 # def check_exam(arr1,arr2):
-#     count = 0 
+#     count = 0
 #     for i in range(0,len(arr1)):
 #         if arr1[i] == arr2[i] and arr2[i] != "":
 #             count += 4
@@ -70,7 +66,6 @@
 # print(check_exam(a,b))
 
 
-
 # # Alternate capitalization
 # a = "abcdef"
 # b = "abracadabra"
@@ -81,7 +76,6 @@
 # print(capitalize(a))
 # a = [1,2,3,4,3,3,5,1,0]
 # print(set(a))
-
 
 
 # Row Weights
@@ -101,15 +95,13 @@
 # print(row_weights([29,83,67,53,19,28,96]))
 
 
-
-#String ends with?
+# String ends with?
 # def solution(string, ending):
 #     return string.endswith(ending)
 # print(solution('abcde', 'cde'))
 
 
-
-#Jaden Casing Strings
+# Jaden Casing Strings
 # a = "How can mirrors be real if our eyes aren't real"
 # def to_jaden_case(string):
 #     result = ''
@@ -120,13 +112,11 @@
 # print(to_jaden_case(a))
 
 
-
 # Sum of angles
 # def angle(n):
 #     if n >= 3:
 #         return (n-2) * 180
 # print(angle(4))
-
 
 
 # Sum of old numbers
@@ -141,7 +131,6 @@
 # print(row_sum_odd_numbers(13))
 
 
-
 # Sorted? yes? no? how?
 # def is_sorted_and_how(arr):
 #     if arr == sorted(arr):
@@ -151,7 +140,6 @@
 #     else:
 #         return 'no'
 # print(is_sorted_and_how([9,6,4,3,1,0]))
-
 
 
 # Bumps in the Road
@@ -167,11 +155,9 @@
 # print(bumps("_nnnnnnn_n__n______nn__nn_nnn"))
 
 
-
 # JavaScript Array Filter
 # def get_even_numbers(arr):
-#     return list(filter(lambda x: x%2 == 0, arr)) 
-
+#     return list(filter(lambda x: x%2 == 0, arr))
 
 
 # Flatten and sort an array
@@ -183,11 +169,9 @@
 # 	return sorted(result)
 
 
-
 # No oddities here
 # def no_odds(values):
 #     return [value for value in values if value % 2 == 0]
-
 
 
 # Parts of a list
@@ -199,7 +183,6 @@
 #         else:
 #             result.append((" ".join(arr[:e+1]), " ".join(arr[e+1:])))
 #     return result
-
 
 
 # Even numbers in an array
@@ -215,14 +198,12 @@
 # print(even_numbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2))
 
 
-
 # Vowel Count
 # def get_count(sentence):
 #     num_vowels = 0
 #     for vow in ["a", "e", "i", "o", "u"]:
 #         num_vowels += sentence.count(vow)
 #     return num_vowels
-
 
 
 # Odd or Even?
@@ -233,7 +214,6 @@
 #         return "odd"
 
 
-
 # Reverse words
 # def reverse_words(text):
 #     result = []
@@ -242,17 +222,14 @@
 #     return " ".join(result)
 
 
-
 # Greet Me
-# def greet(name): 
+# def greet(name):
 #     return 'Hello {}!'.format(name.title())
-
 
 
 # Round up to the next multiple of 5
 # def round_to_next5(n):
 #     return n + (5 - n) % 5
-
 
 
 # Factorial
@@ -266,11 +243,9 @@
 #         return result
 
 
-
 # Number of People in the Bus
 # def number(bus_stops):
 #     return sum([i[0] - i[1] for i in bus_stops])
-
 
 
 # Shortest Word
@@ -278,7 +253,6 @@
 #     words = s.split(' ')
 #     words.sort(key=len)
 #     return len(words[0])
-
 
 
 # Remove the minimum
@@ -351,14 +325,14 @@
 #     for i in strng.split('\n'):
 #         result.append(i[::-1])
 #     return '\n'.join(result)
-        
-    
+
+
 # def hor_mirror(strng):
 #     result =[]
 #     for i in strng.split('\n'):
 #         result.append(i)
 #     return '\n'.join(result[::-1])
-    
+
 # def oper(fct, s):
 #     return fct(s)
 
@@ -367,14 +341,12 @@
 # print(oper(vert_mirror,s))
 
 
-
 # Convert an array of strings to array of numbers
-# def to_float_array(arr): 
+# def to_float_array(arr):
 #     result = []
 #     for number in arr:
 #         result.append(float(number))
 #     return result
-        
 
 
 # Sort the Gift Code
@@ -386,7 +358,6 @@
 #     return result
 
 
-
 # Most digits
 # a = [8, 900, 500, 891]
 # def find_longest(arr):
@@ -394,9 +365,8 @@
 #     l = len(str(sort_arr[-1]))
 #     for i in arr:
 #         if len(str(i)) == l:
-#             return i 
+#             return i
 # print(find_longest(a))
-
 
 
 # Fix string case
@@ -453,3 +423,13 @@
 #             char_counts[char] = 1
 #     char_count_tuples = [(char, count) for char, count in char_counts.items()]
 #     return char_count_tuples
+
+
+# Maximum Product
+def adjacent_element_product(array):
+    result = -1000000
+    for i in range(0, len(array) - 1):
+        multipling = array[i] * array[i + 1]
+        if multipling > result:
+            result = multipling
+    return result
