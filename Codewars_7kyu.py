@@ -426,10 +426,21 @@
 
 
 # Maximum Product
-def adjacent_element_product(array):
-    result = -1000000
-    for i in range(0, len(array) - 1):
-        multipling = array[i] * array[i + 1]
-        if multipling > result:
-            result = multipling
-    return result
+# def adjacent_element_product(array):
+#     result = -1000000
+#     for i in range(0, len(array) - 1):
+#         multipling = array[i] * array[i + 1]
+#         if multipling > result:
+#             result = multipling
+#     return result
+
+
+# # Switcheroo
+# def switcheroo(s):
+#     string_list = list(s)
+#     for i in range(len(s)):
+#         if string_list[i] == 'a':
+#             string_list[i] = 'b'
+#         elif string_list[i] == 'b':
+#             string_list[i] = 'a'
+#     return ''.join(string_list)
