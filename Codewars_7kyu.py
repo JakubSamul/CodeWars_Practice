@@ -444,3 +444,13 @@
 #         elif string_list[i] == 'b':
 #             string_list[i] = 'a'
 #     return ''.join(string_list)
+
+
+# # Minimize Sum Of Array (Array Series #1)
+# def min_sum(arr):
+#     arr.sort(reverse=True)
+#     result = 0
+#     l = int(len(arr) / 2)
+#     for i in range(1, l + 1):
+#         result += arr[i - 1] * arr[-i]
+#     return result
