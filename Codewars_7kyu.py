@@ -454,3 +454,8 @@
 #     for i in range(1, l + 1):
 #         result += arr[i - 1] * arr[-i]
 #     return result
+
+
+# # Spacify
+# def spacify(string):
+#     return " ".join(string)
