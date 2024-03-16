@@ -354,19 +354,24 @@
 #     return passes
 
 
-# Reverse or rotate
-def rev_rot(str, sz):
-    if sz <= 0 or not str:
-        return ""
-    if sz > len(str):
-        return ""
-    modified_chunks = []
-    for i in range(0, len(str), sz):
-        chunk = str[i : i + sz]
-        if len(chunk) == sz:
-            digit_sum = sum(int(digit) ** 3 for digit in chunk)
-            if digit_sum % 2 == 0:
-                modified_chunks.append(chunk[::-1])
-            else:
-                modified_chunks.append(chunk[1:] + chunk[0])
-    return "".join(modified_chunks)
+# # Reverse or rotate
+# def rev_rot(str, sz):
+#     if sz <= 0 or not str:
+#         return ""
+#     if sz > len(str):
+#         return ""
+#     modified_chunks = []
+#     for i in range(0, len(str), sz):
+#         chunk = str[i: i + sz]
+#         if len(chunk) == sz:
+#             digit_sum = sum(int(digit) ** 3 for digit in chunk)
+#             if digit_sum % 2 == 0:
+#                 modified_chunks.append(chunk[::-1])
+#             else:
+#                 modified_chunks.append(chunk[1:] + chunk[0])
+#     return "".join(modified_chunks)
+
+
+# Dashatize it
+a = "1213212424"
+print(a[2])

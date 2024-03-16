@@ -459,3 +459,9 @@
 # # Spacify
 # def spacify(string):
 #     return " ".join(string)
+
+
+# Nth Smallest Element (Array Series #4)
+def nth_smallest(arr, pos):
+    arr.sort()
+    return arr[pos - 1]
