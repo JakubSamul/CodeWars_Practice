@@ -372,6 +372,32 @@
 #     return "".join(modified_chunks)
 
 
-# Dashatize it
-a = "1213212424"
-print(a[2])
+# # Dashatize it
+# a = 1213212424
+
+
+# def dashatize(n):
+#     result = []
+#     nn = str(abs(n))
+#     for i in range(0, len(nn)):
+#         if i == 0:
+#             result.append(nn[i])
+#             continue
+#         if i == len(nn) - 1 and int(nn[i]) % 2 == 1:
+#             result.append("-" + nn[i])
+#             continue
+#         if int(nn[i]) % 2 == 1 and int(nn[i - 1]) % 2 == 0:
+#             result.append("-" + nn[i])
+#             continue
+#         if int(nn[i]) % 2 == 0 and int(nn[i - 1]) % 2 == 1:
+#             result.append("-" + nn[i])
+#             continue
+#         if int(nn[i]) % 2 == 1 and int(nn[i - 1]) % 2 == 1:
+#             result.append("-" + nn[i])
+#             continue
+#         if int(nn[i]) % 2 == 0:
+#             result.append(nn[i])
+#     return "".join(result)
+
+
+# print(dashatize(a))
