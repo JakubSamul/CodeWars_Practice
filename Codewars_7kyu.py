@@ -462,6 +462,21 @@
 
 
 # Nth Smallest Element (Array Series #4)
-def nth_smallest(arr, pos):
-    arr.sort()
-    return arr[pos - 1]
+# def nth_smallest(arr, pos):
+#     arr.sort()
+#     return arr[pos - 1]
+
+
+# Filter the number
+a = "abc1234"
+
+
+def filter_string(st):
+    result = ""
+    for i in st:
+        if i in "0123456789":
+            result += i
+    return int(result)
+
+
+print(filter_string(a))
