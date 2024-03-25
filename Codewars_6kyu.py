@@ -404,21 +404,45 @@
 
 
 # Street Fighter 2 - Character Selection
-def street_fighter_selection(fighters, initial_position, moves):
-    rows, cols = len(fighters), len(fighters[0])
-    current_row, current_col = initial_position
-    selected_fighters = []
+# def street_fighter_selection(fighters, initial_position, moves):
+#     rows, cols = len(fighters), len(fighters[0])
+#     current_row, current_col = initial_position
+#     selected_fighters = []
 
-    for move in moves:
-        if move == "up":
-            current_row = max(0, current_row - 1)
-        elif move == "down":
-            current_row = min(rows - 1, current_row + 1)
-        elif move == "left":
-            current_col = (current_col - 1) % cols
-        elif move == "right":
-            current_col = (current_col + 1) % cols
+#     for move in moves:
+#         if move == "up":
+#             current_row = max(0, current_row - 1)
+#         elif move == "down":
+#             current_row = min(rows - 1, current_row + 1)
+#         elif move == "left":
+#             current_col = (current_col - 1) % cols
+#         elif move == "right":
+#             current_col = (current_col + 1) % cols
 
-        selected_fighters.append(fighters[current_row][current_col])
+#         selected_fighters.append(fighters[current_row][current_col])
 
-    return selected_fighters
+#     return selected_fighters
+
+
+# Simple Encryption #1 - Alternating Split
+test = "This is a test!"
+
+
+def decrypt(encrypted_text, n):
+    pass
+
+
+def encrypt(text, n):
+    result = text
+    while n > 0:
+        w1 = ""
+        for i in range(1, len(text), 2):
+            w1 += result[i]
+        for i in range(0, len(text), 2):
+            w1 += result[i]
+        result = w1
+        n -= 1
+    return result
+
+
+print(encrypt(test, 3))

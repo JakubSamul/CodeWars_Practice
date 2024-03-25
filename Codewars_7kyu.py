@@ -22,7 +22,8 @@
 
 
 # Maximum Length Difference
-# s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa", "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
+# s1 = ["hoqq", "bbllkw", "oox", "ejjuyyy", "plmiis", "xxxzgpsssa",
+# "xxwwkktt", "znnnnfqknaz", "qqquuhii", "dvvvwz"]
 # s2 = ["cccooommaaqqoxii", "gggqaffhhh", "tttoowwwmmww"]
 # def mxdiflg(a1, a2):
 #     result = []
@@ -421,7 +422,7 @@
 #             char_counts[char] += 1
 #         else:
 #             char_counts[char] = 1
-#     char_count_tuples = [(char, count) for char, count in char_counts.items()]
+#     char_count_tuples=[(char, count) for char, count in char_counts.items()]
 #     return char_count_tuples
 
 
@@ -468,15 +469,15 @@
 
 
 # Filter the number
-a = "abc1234"
+# a = "abc1234"
 
 
-def filter_string(st):
-    result = ""
-    for i in st:
-        if i in "0123456789":
-            result += i
-    return int(result)
+# def filter_string(st):
+#     result = ""
+#     for i in st:
+#         if i in "0123456789":
+#             result += i
+#     return int(result)
 
 
-print(filter_string(a))
+# print(filter_string(a))
