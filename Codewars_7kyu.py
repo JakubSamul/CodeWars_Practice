@@ -484,5 +484,10 @@
 
 
 # Power of two
-def power_of_two(x):
-    return x > 0 and (x & (x - 1)) == 0
+# def power_of_two(x):
+#     return x > 0 and (x & (x - 1)) == 0
+
+
+# Sum of Cubes
+def sum_cubes(n):
+    return sum([i**3 for i in range(1, n + 1)])
