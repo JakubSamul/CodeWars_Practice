@@ -425,44 +425,44 @@
 
 
 # Simple Encryption #1 - Alternating Split
-test = "This is a test!"
-test2 = "s eT ashi tist!"
+# test = "This is a test!"
+# test2 = "s eT ashi tist!"
 
 
-def decrypt(encrypted_text, n):
-    if encrypted_text == None:
-        return None
-    else:
-        result = encrypted_text
-        l = 0
-        if len(encrypted_text) % 2 == 1:
-            l = len(encrypted_text) - 1
-        else:
-            l = len(encrypted_text)
-        while n > 0:
-            w1 = ""
-            for i in range(int(l / 2), l):
-                w1 += result[i]
-                w1 += result[i - int((l / 2))]
-            if len(encrypted_text) % 2 == 1:
-                w1 += result[-1]
-            result = w1
-            n -= 1
-        return result
+# def decrypt(encrypted_text, n):
+#     if encrypted_text == None:
+#         return None
+#     else:
+#         result = encrypted_text
+#         l = 0
+#         if len(encrypted_text) % 2 == 1:
+#             l = len(encrypted_text) - 1
+#         else:
+#             l = len(encrypted_text)
+#         while n > 0:
+#             w1 = ""
+#             for i in range(int(l / 2), l):
+#                 w1 += result[i]
+#                 w1 += result[i - int((l / 2))]
+#             if len(encrypted_text) % 2 == 1:
+#                 w1 += result[-1]
+#             result = w1
+#             n -= 1
+#         return result
 
 
-def encrypt(text, n):
-    result = text
-    while n > 0:
-        w1 = ""
-        for i in range(1, len(text), 2):
-            w1 += result[i]
-        for i in range(0, len(text), 2):
-            w1 += result[i]
-        result = w1
-        n -= 1
-    return result
+# def encrypt(text, n):
+#     result = text
+#     while n > 0:
+#         w1 = ""
+#         for i in range(1, len(text), 2):
+#             w1 += result[i]
+#         for i in range(0, len(text), 2):
+#             w1 += result[i]
+#         result = w1
+#         n -= 1
+#     return result
 
 
-print(encrypt(test, 3))
-print(decrypt(test2, 2))
+# print(encrypt(test, 3))
+# print(decrypt(test2, 2))

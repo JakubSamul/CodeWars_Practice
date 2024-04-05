@@ -489,5 +489,24 @@
 
 
 # Sum of Cubes
-def sum_cubes(n):
-    return sum([i**3 for i in range(1, n + 1)])
+# def sum_cubes(n):
+#     return sum([i**3 for i in range(1, n + 1)])
+
+
+# Sum of numbers from 0 to N
+def show_sequence(n):
+    series = ""
+    total_sum = 0
+    if n == 0:
+        return "0=0"
+    if n < 0:
+        return f"{n}<0"
+    for i in range(n + 1):
+        total_sum += i
+        if i < n:
+            series += str(i) + "+"
+        else:
+            series += str(i)
+
+    series_with_sum = series + " = " + str(total_sum)
+    return series_with_sum
