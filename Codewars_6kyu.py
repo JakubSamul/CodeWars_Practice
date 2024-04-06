@@ -476,3 +476,17 @@
 #             position = ord(char.lower()) - ord("a") + 1
 #             positions.append(str(position))
 #     return " ".join(positions)
+
+
+# Meeting
+def meeting(s):
+    names = s.upper().split(";")
+
+    sorted_names = sorted(names, key=lambda x: (x.split(":")[1], x.split(":")[0]))
+
+    formatted_names = ""
+    for name in sorted_names:
+        first_name, last_name = name.split(":")
+        formatted_names += f"({last_name}, {first_name})"
+
+    return formatted_names

@@ -524,15 +524,9 @@
 #     return result
 
 
-# Meeting
-def meeting(s):
-    names = s.upper().split(";")
-
-    sorted_names = sorted(names, key=lambda x: (x.split(":")[1], x.split(":")[0]))
-
-    formatted_names = ""
-    for name in sorted_names:
-        first_name, last_name = name.split(":")
-        formatted_names += f"({last_name}, {first_name})"
-
-    return formatted_names
+# Sum of Cubes
+def sum_cubes(n):
+    total_sum = 0
+    for i in range(1, n + 1):
+        total_sum += i**3
+    return total_sum
