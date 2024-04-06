@@ -513,12 +513,26 @@
 
 
 # Simple remove duplicate
-def solve(arr):
-    result = []
-    seen = set()
-    for item in reversed(arr):
-        if item not in seen:
-            result.append(item)
-            seen.add(item)
-    result.reverse()
-    return result
+# def solve(arr):
+#     result = []
+#     seen = set()
+#     for item in reversed(arr):
+#         if item not in seen:
+#             result.append(item)
+#             seen.add(item)
+#     result.reverse()
+#     return result
+
+
+# Meeting
+def meeting(s):
+    names = s.upper().split(";")
+
+    sorted_names = sorted(names, key=lambda x: (x.split(":")[1], x.split(":")[0]))
+
+    formatted_names = ""
+    for name in sorted_names:
+        first_name, last_name = name.split(":")
+        formatted_names += f"({last_name}, {first_name})"
+
+    return formatted_names
