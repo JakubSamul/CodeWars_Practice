@@ -13,8 +13,6 @@
 #             return [required, num]
 #         myset.add(num)
 # print(sum_pairs(l4,s2))
-                
-
 
 
 # Directions Reduction
@@ -31,18 +29,16 @@
 # print(dirReduc(a))
 
 
-
 #  String incrementer
 # a = "foobar23"
 # def increment_string(strng):
 #     result = strng.rstrip("0123456789")
 #     l = strng[len(result):]
-#     if l == "": 
+#     if l == "":
 #         return strng+"1"
 #     else:
 #         return result + str(int(l) + 1).zfill(len(l))
 # print(increment_string(a))
-
 
 
 # Regex Password Validation
@@ -60,7 +56,6 @@
 # regex1="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[^\W_]{6,}$"
 
 
-
 # Maximum subarray sum
 # def max_sequence(arr):
 #     max = 0
@@ -75,7 +70,6 @@
 #         elif i > 0:
 #             max_1 += i
 #     return max
-
 
 
 # Rot13
@@ -101,33 +95,50 @@
 # print(rot13(a))
 
 
-
 # Gap in Primes
-def prime(i):
-    if i <=0 or i == 1:
-        return False
-    j = 2
-    while(j <= i ** 0.5):
-        if i % j ==0:
-            return False
-        j += 1
-    return True
+# def prime(i):
+#     if i <=0 or i == 1:
+#         return False
+#     j = 2
+#     while(j <= i ** 0.5):
+#         if i % j ==0:
+#             return False
+#         j += 1
+#     return True
 
-def gap(g, m, n):
-    number = 0
-    result = 0
-    for i in range(m,n+1):
-        if prime(i):
-            if number == 0:
-                number = i
-            elif result == 0:
-                result = i
-            else:
-                number = result
-                result = i
-        if result - number == g:
-            return [number, result]
-    return None
-print(gap(8,300,400))
-print(gap(2,100,110))
-print(gap(10,300,400))
+# def gap(g, m, n):
+#     number = 0
+#     result = 0
+#     for i in range(m,n+1):
+#         if prime(i):
+#             if number == 0:
+#                 number = i
+#             elif result == 0:
+#                 result = i
+#             else:
+#                 number = result
+#                 result = i
+#         if result - number == g:
+#             return [number, result]
+#     return None
+# print(gap(8,300,400))
+# print(gap(2,100,110))
+# print(gap(10,300,400))
+
+
+# Last digit of a large number
+def last_digit(n1, n2):
+    if n2 == 0:
+        return 1
+    last_digit_of_a = n1 % 10
+    result = 1
+    while n2 > 0:
+        if n2 % 2 == 1:
+            result = (result * last_digit_of_a) % 10
+        last_digit_of_a = (last_digit_of_a * last_digit_of_a) % 10
+        n2 //= 2
+    return result
+
+
+print(last_digit(9, 7))
+print(last_digit(4, 2))
