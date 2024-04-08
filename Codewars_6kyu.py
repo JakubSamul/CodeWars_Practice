@@ -479,14 +479,49 @@
 
 
 # Meeting
-def meeting(s):
-    names = s.upper().split(";")
+# def meeting(s):
+#     names = s.upper().split(";")
 
-    sorted_names = sorted(names, key=lambda x: (x.split(":")[1], x.split(":")[0]))
+#     sorted_names = sorted(names, key=lambda x: (x.split(":")[1], x.split(":")[0]))
 
-    formatted_names = ""
-    for name in sorted_names:
-        first_name, last_name = name.split(":")
-        formatted_names += f"({last_name}, {first_name})"
+#     formatted_names = ""
+#     for name in sorted_names:
+#         first_name, last_name = name.split(":")
+#         formatted_names += f"({last_name}, {first_name})"
 
-    return formatted_names
+#     return formatted_names
+
+
+# # Prime ant
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+
+def prime_ant(n):
+    A = [i for i in range(2, 2 * n + 1)]  # Initialize array/list A
+    p = 0  # Initial position of the ant
+    for _ in range(n):
+        if is_prime(A[p]):
+            p += 1
+        else:
+            q = 2  # Smallest divisor greater than 1
+            while A[p] % q != 0 or not is_prime(q):
+                q += 1
+            A[p] //= q
+            A[p - 1] += q
+            p -= 1
+    return p
+
+
+print(prime_ant(11))
