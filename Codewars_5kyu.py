@@ -127,18 +127,57 @@
 
 
 # Last digit of a large number
-def last_digit(n1, n2):
-    if n2 == 0:
-        return 1
-    last_digit_of_a = n1 % 10
-    result = 1
-    while n2 > 0:
-        if n2 % 2 == 1:
-            result = (result * last_digit_of_a) % 10
-        last_digit_of_a = (last_digit_of_a * last_digit_of_a) % 10
-        n2 //= 2
-    return result
+# def last_digit(n1, n2):
+#     if n2 == 0:
+#         return 1
+#     last_digit_of_a = n1 % 10
+#     result = 1
+#     while n2 > 0:
+#         if n2 % 2 == 1:
+#             result = (result * last_digit_of_a) % 10
+#         last_digit_of_a = (last_digit_of_a * last_digit_of_a) % 10
+#         n2 //= 2
+#     return result
 
 
-print(last_digit(9, 7))
-print(last_digit(4, 2))
+# print(last_digit(9, 7))
+# print(last_digit(4, 2))
+
+
+# Prime Ant - Performance Version
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+
+def prime_ant(n):
+    A = [i for i in range(2, 2 * n + 1)]
+    p = 0
+    moves = []
+    for _ in range(n):
+        moves.append(A[p])
+        if is_prime(A[p]):
+            p += 1
+        else:
+            q = 2
+            while A[p] % q != 0 or not is_prime(q):
+                q += 1
+            A[p] //= q
+            A[p - 1] += q
+            p -= 1
+    return moves
+
+
+print(prime_ant(10000))
+print(prime_ant(100000))
+print(prime_ant(1000000))
