@@ -525,8 +525,24 @@
 
 
 # Sum of Cubes
-def sum_cubes(n):
-    total_sum = 0
-    for i in range(1, n + 1):
-        total_sum += i**3
-    return total_sum
+# def sum_cubes(n):
+#     total_sum = 0
+#     for i in range(1, n + 1):
+#         total_sum += i**3
+#     return total_sum
+
+
+# The Coupon Code
+from datetime import datetime
+
+
+def check_coupon(enteredCode, correctCode, currentDate, expirationDate):
+    current_date = datetime.strptime(currentDate, "%B %d, %Y")
+    expiration_date = datetime.strptime(expirationDate, "%B %d, %Y")
+
+    return enteredCode == correctCode and current_date <= expiration_date
+
+
+# Test cases
+print(check_coupon("123", "123", "July 9, 2015", "July 9, 2015"))
+print(check_coupon("123", "123", "July 9, 2015", "July 2, 2015"))
