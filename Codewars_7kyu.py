@@ -537,10 +537,12 @@ from datetime import datetime
 
 
 def check_coupon(enteredCode, correctCode, currentDate, expirationDate):
-    current_date = datetime.strptime(currentDate, "%B %d, %Y")
-    expiration_date = datetime.strptime(expirationDate, "%B %d, %Y")
-
-    return enteredCode == correctCode and current_date <= expiration_date
+    return (
+        enteredCode == correctCode
+        and datetime.strptime(currentDate, "%B %d, %Y")
+        <= datetime.strptime(expirationDate, "%B %d, %Y")
+        and type(enteredCode) is str
+    )
 
 
 # Test cases
