@@ -493,35 +493,51 @@
 
 
 # # Prime ant
-def is_prime(n):
-    if n <= 1:
-        return False
-    if n <= 3:
-        return True
-    if n % 2 == 0 or n % 3 == 0:
-        return False
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-        i += 6
-    return True
+# def is_prime(n):
+#     if n <= 1:
+#         return False
+#     if n <= 3:
+#         return True
+#     if n % 2 == 0 or n % 3 == 0:
+#         return False
+#     i = 5
+#     while i * i <= n:
+#         if n % i == 0 or n % (i + 2) == 0:
+#             return False
+#         i += 6
+#     return True
 
 
-def prime_ant(n):
-    A = [i for i in range(2, 2 * n + 1)]  # Initialize array/list A
-    p = 0  # Initial position of the ant
-    for _ in range(n):
-        if is_prime(A[p]):
-            p += 1
+# def prime_ant(n):
+#     A = [i for i in range(2, 2 * n + 1)]  # Initialize array/list A
+#     p = 0  # Initial position of the ant
+#     for _ in range(n):
+#         if is_prime(A[p]):
+#             p += 1
+#         else:
+#             q = 2  # Smallest divisor greater than 1
+#             while A[p] % q != 0 or not is_prime(q):
+#                 q += 1
+#             A[p] //= q
+#             A[p - 1] += q
+#             p -= 1
+#     return p
+
+
+# print(prime_ant(11))
+
+
+# Break camelCase
+def solution(s):
+    result = ""
+    for char in s:
+        if char.isupper():
+            result += " " + char
         else:
-            q = 2  # Smallest divisor greater than 1
-            while A[p] % q != 0 or not is_prime(q):
-                q += 1
-            A[p] //= q
-            A[p - 1] += q
-            p -= 1
-    return p
+            result += char
+    return result
 
 
-print(prime_ant(11))
+print(solution("camelCasing"))
+print(solution("identifier"))
+print(solution(""))
