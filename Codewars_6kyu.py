@@ -528,16 +528,40 @@
 
 
 # Break camelCase
-def solution(s):
-    result = ""
-    for char in s:
-        if char.isupper():
-            result += " " + char
-        else:
-            result += char
-    return result
+# def solution(s):
+#     result = ""
+#     for char in s:
+#         if char.isupper():
+#             result += " " + char
+#         else:
+#             result += char
+#     return result
 
 
-print(solution("camelCasing"))
-print(solution("identifier"))
-print(solution(""))
+# print(solution("camelCasing"))
+# print(solution("identifier"))
+# print(solution(""))
+
+
+# Highest Rank Number in an Array
+def highest_rank(arr: list) -> int:
+    arr1 = set(arr)
+    repetitionDict = {}
+    for number in arr1:
+        repeating = 0
+        for _ in arr:
+            if number == _:
+                repeating += 1
+        repetitionDict[number] = repeating
+    maxRepetition = max(repetitionDict.values())
+    mostRepetition = [k for k, v in repetitionDict.items() if v == maxRepetition]
+    return max(mostRepetition)
+
+
+f = [12, 10, 8, 12, 7, 6, 4, 10, 12]
+s = [12, 10, 8, 12, 7, 6, 4, 10, 10]
+t = [12, 10, 8, 12, 7, 6, 4, 10, 12, 10]
+
+print(highest_rank(f))
+print(highest_rank(s))
+print(highest_rank(t))
