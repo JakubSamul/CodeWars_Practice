@@ -568,14 +568,33 @@
 
 
 # Two Sum
-def two_sum(nums, target):
-    num_dict = {}
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in num_dict:
-            return (num_dict[complement], i)
-        num_dict[num] = i
+# def two_sum(nums, target):
+#     num_dict = {}
+#     for i, num in enumerate(nums):
+#         complement = target - num
+#         if complement in num_dict:
+#             return (num_dict[complement], i)
+#         num_dict[num] = i
 
 
-print(two_sum([1, 2, 3], 4))
-print(two_sum([3, 2, 4], 6))
+# print(two_sum([1, 2, 3], 4))
+# print(two_sum([3, 2, 4], 6))
+
+
+# Count characters in your string
+def count(s):
+    if not s:
+        return {}
+
+    char_count = {}
+    for char in s:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+
+    return char_count
+
+
+print(count("aba"))
+print(count(""))
