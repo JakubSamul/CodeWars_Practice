@@ -581,20 +581,39 @@
 # print(two_sum([3, 2, 4], 6))
 
 
-# Count characters in your string
-def count(s):
-    if not s:
-        return {}
+# # Count characters in your string
+# def count(s):
+#     if not s:
+#         return {}
 
-    char_count = {}
-    for char in s:
-        if char in char_count:
-            char_count[char] += 1
-        else:
-            char_count[char] = 1
+#     char_count = {}
+#     for char in s:
+#         if char in char_count:
+#             char_count[char] += 1
+#         else:
+#             char_count[char] = 1
 
-    return char_count
+#     return char_count
 
 
-print(count("aba"))
-print(count(""))
+# print(count("aba"))
+# print(count(""))
+
+
+# Are they the "same"?
+def comp(a, b):
+
+    if a is None or b is None:
+        return False
+
+    if len(a) != len(b):
+        return False
+
+    a_squared = [x * x for x in a]
+
+    return sorted(a_squared) == sorted(b)
+
+
+a = [121, 144, 19, 161, 19, 144, 19, 11]
+b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+print(comp(a, b))
