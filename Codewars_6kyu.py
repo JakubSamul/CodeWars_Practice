@@ -601,19 +601,37 @@
 
 
 # Are they the "same"?
-def comp(a, b):
+# def comp(a, b):
 
-    if a is None or b is None:
-        return False
+#     if a is None or b is None:
+#         return False
 
-    if len(a) != len(b):
-        return False
+#     if len(a) != len(b):
+#         return False
 
-    a_squared = [x * x for x in a]
+#     a_squared = [x * x for x in a]
 
-    return sorted(a_squared) == sorted(b)
+#     return sorted(a_squared) == sorted(b)
 
 
-a = [121, 144, 19, 161, 19, 144, 19, 11]
-b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
-print(comp(a, b))
+# a = [121, 144, 19, 161, 19, 144, 19, 11]
+# b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+# print(comp(a, b))
+
+
+# Duplicate Encoder
+def duplicate_encode(word):
+    result = ""
+    for i in word.lower():
+        if word.lower().count(i) == 1:
+            result += "("
+        else:
+            result += ")"
+        print(result)
+    return result
+
+
+print(duplicate_encode("din"))  # "((("
+print(duplicate_encode("recede"))  # "()()()"
+print(duplicate_encode("Success"))  # ")())())"
+print(duplicate_encode("nDNpfV)k"))  # ')()((((('
