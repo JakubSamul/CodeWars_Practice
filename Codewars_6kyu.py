@@ -619,19 +619,41 @@
 # print(comp(a, b))
 
 
-# Duplicate Encoder
-def duplicate_encode(word):
-    result = ""
-    for i in word.lower():
-        if word.lower().count(i) == 1:
-            result += "("
-        else:
-            result += ")"
-        print(result)
-    return result
+# # Duplicate Encoder
+# def duplicate_encode(word):
+#     result = ""
+#     for i in word.lower():
+#         if word.lower().count(i) == 1:
+#             result += "("
+#         else:
+#             result += ")"
+#         print(result)
+#     return result
 
 
-print(duplicate_encode("din"))  # "((("
-print(duplicate_encode("recede"))  # "()()()"
-print(duplicate_encode("Success"))  # ")())())"
-print(duplicate_encode("nDNpfV)k"))  # ')()((((('
+# print(duplicate_encode("din"))  # "((("
+# print(duplicate_encode("recede"))  # "()()()"
+# print(duplicate_encode("Success"))  # ")())())"
+# print(duplicate_encode("nDNpfV)k"))  # ')()((((('
+
+
+# # Your order, please
+# def order(sentence):
+#     for i in sentence:
+#         for l in range(1:10):
+
+#     return
+
+
+# print(order("is2 Thi1s T4est 3a"))
+# print(order("4of Fo1r pe6ople g3ood th5e the2"))
+
+
+# Array.diff
+def array_diff(a, b):
+    return [item for item in a if item not in b]
+
+
+print(array_diff([1, 2, 3], [4, 5]))
+print(array_diff([], [1, 2]))
+print(array_diff([1, 2, 2], [2]))
