@@ -650,10 +650,28 @@
 
 
 # Array.diff
-def array_diff(a, b):
-    return [item for item in a if item not in b]
+# def array_diff(a, b):
+#     return [item for item in a if item not in b]
 
 
-print(array_diff([1, 2, 3], [4, 5]))
-print(array_diff([], [1, 2]))
-print(array_diff([1, 2, 2], [2]))
+# print(array_diff([1, 2, 3], [4, 5]))
+# print(array_diff([], [1, 2]))
+# print(array_diff([1, 2, 2], [2]))
+
+# 8 inch pizza equivalence
+import math
+
+
+def how_many_pizzas(diameter):
+    r8 = 8 / 2
+    r_given = diameter / 2
+
+    area_8_inch = math.pi * r8**2
+    area_given = math.pi * r_given**2
+
+    total_8_inch_pizzas = area_given / area_8_inch
+
+    full_pizzas = int(total_8_inch_pizzas)
+    slices = round((total_8_inch_pizzas - full_pizzas) * 8)
+
+    return f"pizzas: {full_pizzas}, slices: {slices}"
