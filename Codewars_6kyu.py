@@ -659,19 +659,39 @@
 # print(array_diff([1, 2, 2], [2]))
 
 # 8 inch pizza equivalence
-import math
+# import math
 
 
-def how_many_pizzas(diameter):
-    r8 = 8 / 2
-    r_given = diameter / 2
+# def how_many_pizzas(diameter):
+#     r8 = 8 / 2
+#     r_given = diameter / 2
 
-    area_8_inch = math.pi * r8**2
-    area_given = math.pi * r_given**2
+#     area_8_inch = math.pi * r8**2
+#     area_given = math.pi * r_given**2
 
-    total_8_inch_pizzas = area_given / area_8_inch
+#     total_8_inch_pizzas = area_given / area_8_inch
 
-    full_pizzas = int(total_8_inch_pizzas)
-    slices = round((total_8_inch_pizzas - full_pizzas) * 8)
+#     full_pizzas = int(total_8_inch_pizzas)
+#     slices = round((total_8_inch_pizzas - full_pizzas) * 8)
 
-    return f"pizzas: {full_pizzas}, slices: {slices}"
+#     return f"pizzas: {full_pizzas}, slices: {slices}"
+
+
+# Which are in?
+
+
+def in_array(array1, array2):
+    result = []
+    for i in array1:
+        for j in array2:
+            if i in j:
+                result.append(i)
+    return sorted(set(result))
+
+
+print(
+    in_array(
+        ["arp", "live", "strong"],
+        ["lively", "alive", "harp", "sharp", "armstrong"],
+    )
+)
