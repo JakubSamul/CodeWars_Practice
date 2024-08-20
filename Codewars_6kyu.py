@@ -677,21 +677,40 @@
 #     return f"pizzas: {full_pizzas}, slices: {slices}"
 
 
-# Which are in?
+# # Which are in?
 
 
-def in_array(array1, array2):
-    result = []
-    for i in array1:
-        for j in array2:
-            if i in j:
-                result.append(i)
-    return sorted(set(result))
+# def in_array(array1, array2):
+#     result = []
+#     for i in array1:
+#         for j in array2:
+#             if i in j:
+#                 result.append(i)
+#     return sorted(set(result))
 
 
-print(
-    in_array(
-        ["arp", "live", "strong"],
-        ["lively", "alive", "harp", "sharp", "armstrong"],
+# print(
+#     in_array(
+#         ["arp", "live", "strong"],
+#         ["lively", "alive", "harp", "sharp", "armstrong"],
+#     )
+# )
+
+
+# Find the missiong letter
+import string
+
+
+def find_missing_letter(chars):
+    alphabet = (
+        string.ascii_lowercase
+        if chars[0].islower()
+        else string.ascii_uppercase
     )
-)
+    start = alphabet.index(chars[0])
+    for i, char in enumerate(chars):
+        if alphabet[start + i] != char:
+            return alphabet[start + i]
+
+
+print(find_missing_letter(["a", "b", "c", "d", "f"]))
