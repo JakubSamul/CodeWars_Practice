@@ -144,40 +144,16 @@
 # print(last_digit(4, 2))
 
 
-# Prime Ant - Performance Version
-# def is_prime(n):
-#     if n <= 1:
-#         return False
-#     if n <= 3:
-#         return True
-#     if n % 2 == 0 or n % 3 == 0:
-#         return False
-#     i = 5
-#     while i * i <= n:
-#         if n % i == 0 or n % (i + 2) == 0:
-#             return False
-#         i += 6
-#     return True
+# Pete, the baker
 
 
-# def prime_ant(n):
-#     A = [i for i in range(2, 2 * n + 1)]
-#     p = 0
-#     moves = []
-#     for _ in range(n):
-#         moves.append(A[p])
-#         if is_prime(A[p]):
-#             p += 1
-#         else:
-#             q = 2
-#             while A[p] % q != 0 or not is_prime(q):
-#                 q += 1
-#             A[p] //= q
-#             A[p - 1] += q
-#             p -= 1
-#     return moves
+def cakes(recipe, available):
+    return min(available.get(k, 0) // recipe[k] for k in recipe)
 
 
-# print(prime_ant(10000))
-# print(prime_ant(100000))
-# print(prime_ant(1000000))
+print(
+    cakes(
+        {"flour": 500, "sugar": 200, "eggs": 1},
+        {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200},
+    )
+)
