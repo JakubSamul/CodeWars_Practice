@@ -42,7 +42,8 @@
 
 
 # Regex Password Validation
-# regex = r'^(?=[0-9a-zA-Z]{6,}$)(?=[0-9a-zA-Z]*[A-Z])(?=[0-9a-zA-Z]*[a-z])(?=[0-9a-zA-Z]*[0-9]).*'
+# regex = r'^(?=[0-9a-zA-Z]{6,}$)(?=[0-9a-zA-Z]*[A-Z])(?=[0-9a-zA-Z]*[a-z])
+# (?=[0-9a-zA-Z]*[0-9]).*'
 # # 大佬鼠
 # regex0 = (
 #     '^'            # start line
@@ -144,16 +145,29 @@
 # print(last_digit(4, 2))
 
 
-# Pete, the baker
+# # Pete, the baker
 
 
-def cakes(recipe, available):
-    return min(available.get(k, 0) // recipe[k] for k in recipe)
+# def cakes(recipe, available):
+#     return min(available.get(k, 0) // recipe[k] for k in recipe)
 
 
-print(
-    cakes(
-        {"flour": 500, "sugar": 200, "eggs": 1},
-        {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200},
+# print(
+#     cakes(
+#         {"flour": 500, "sugar": 200, "eggs": 1},
+#         {"flour": 1200, "sugar": 1200, "eggs": 5, "milk": 200},
+#     )
+# )
+
+
+# Weight for weight
+
+
+def order_weight(strng):
+    return " ".join(
+        sorted(strng.split(), key=lambda x: (sum(int(c) for c in x), x))
     )
-)
+
+
+print(order_weight("103 123 4444 99 2000"))
+print(order_weight("2000 10003 1234000 44444444 9999 11 11 22 123"))

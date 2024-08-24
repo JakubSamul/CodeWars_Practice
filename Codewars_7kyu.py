@@ -532,19 +532,20 @@
 #     return total_sum
 
 
-# The Coupon Code
-from datetime import datetime
+# # The Coupon Code
+# from datetime import datetime
 
 
-def check_coupon(enteredCode, correctCode, currentDate, expirationDate):
-    return (
-        enteredCode == correctCode
-        and datetime.strptime(currentDate, "%B %d, %Y")
-        <= datetime.strptime(expirationDate, "%B %d, %Y")
-        and type(enteredCode) is str
-    )
+# def check_coupon(enteredCode, correctCode, currentDate, expirationDate):
+#     return (
+#         enteredCode == correctCode
+#         and datetime.strptime(currentDate, "%B %d, %Y")
+#         <= datetime.strptime(expirationDate, "%B %d, %Y")
+#         and type(enteredCode) is str
+#     )
 
 
-# Test cases
-print(check_coupon("123", "123", "July 9, 2015", "July 9, 2015"))
-print(check_coupon("123", "123", "July 9, 2015", "July 2, 2015"))
+# # Test cases
+# print(check_coupon("123", "123", "July 9, 2015", "July 9, 2015"))
+# print(check_coupon("123", "123", "July 9, 2015", "July 2, 2015"))
+

@@ -30,8 +30,8 @@
 # print(mix(a1,a2))
 
 
-# Snal 
-def snail(snail_map):
-    for i in range(0, len(snail_map)):
+# # Snal
+# def snail(snail_map):
+#     for i in range(0, len(snail_map)):
 
-print(int(3/2))
+# print(int(3/2))
