@@ -160,14 +160,22 @@
 # )
 
 
-# Weight for weight
+# # Weight for weight
 
 
-def order_weight(strng):
-    return " ".join(
-        sorted(strng.split(), key=lambda x: (sum(int(c) for c in x), x))
-    )
+# def order_weight(strng):
+#     return " ".join(
+#         sorted(strng.split(), key=lambda x: (sum(int(c) for c in x), x))
+#     )
 
 
-print(order_weight("103 123 4444 99 2000"))
-print(order_weight("2000 10003 1234000 44444444 9999 11 11 22 123"))
+# print(order_weight("103 123 4444 99 2000"))
+# print(order_weight("2000 10003 1234000 44444444 9999 11 11 22 123"))
+
+
+# Moving Zeros To The End
+def move_zeros(array):
+    return sorted(array, key=lambda x: x == 0 and x is not False)
+
+
+print(move_zeros([0, 1, None, 2, False, 1, 0]))
