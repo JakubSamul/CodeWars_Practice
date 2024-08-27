@@ -35,3 +35,32 @@
 #     for i in range(0, len(snail_map)):
 
 # print(int(3/2))
+
+
+# Humanreadable duration format
+def format_duration(seconds):
+    if seconds == 0:
+        return "now"
+    result = []
+    time = [
+        ("year", 60 * 60 * 24 * 365),
+        ("day", 60 * 60 * 24),
+        ("hour", 60 * 60),
+        ("minute", 60),
+        ("second", 1),
+    ]
+    for k, v in time:
+        if seconds >= v:
+            value = seconds // v
+            if value > 1:
+                k += "s"
+            result.append(f"{value} {k}")
+            seconds %= v
+    return " and".join(", ".join(result).rsplit(",", 1))
+
+
+print(format_duration(3662))
+print(format_duration(0))
+print(format_duration(1))
+print(format_duration(62))
+print(format_duration(120))
