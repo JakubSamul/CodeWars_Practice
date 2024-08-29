@@ -195,10 +195,11 @@
 
 # The Hashtag Generator
 def generate_hashtag(s):
-    if len(s) == 0 or len(s) > 140:
+    result = "#" + "".join(word.capitalize() for word in s.split())
+    if len(s) == 0 or len(result) > 140:
         return False
-    return "#" + "".join(word.capitalize() for word in s.split())
+    return result
 
 
 print(generate_hashtag("hello there thanks for trying my kata"))
-print(generate_hashtag("hello there thanks for trying my kata" * 100))
+print(generate_hashtag("aaaaaabBbbbbbbc dddddddeEEEEEE ffffffGGGGGG"))
