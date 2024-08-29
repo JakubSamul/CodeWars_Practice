@@ -181,13 +181,24 @@
 # print(move_zeros([0, 1, None, 2, False, 1, 0]))
 
 
-# Simple Pig Latin
-def pig_it(text):
-    return " ".join(
-        word[1:] + word[0] + "ay" if word.isalpha() else word
-        for word in text.split()
-    )
+# # Simple Pig Latin
+# def pig_it(text):
+#     return " ".join(
+#         word[1:] + word[0] + "ay" if word.isalpha() else word
+#         for word in text.split()
+#     )
 
 
-print(pig_it("Pig latin is cool"))
-print(pig_it("Hello world !"))
+# print(pig_it("Pig latin is cool"))
+# print(pig_it("Hello world !"))
+
+
+# The Hashtag Generator
+def generate_hashtag(s):
+    if len(s) == 0 or len(s) > 140:
+        return False
+    return "#" + "".join(word.capitalize() for word in s.split())
+
+
+print(generate_hashtag("hello there thanks for trying my kata"))
+print(generate_hashtag("hello there thanks for trying my kata" * 100))
