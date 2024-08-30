@@ -193,13 +193,22 @@
 # print(pig_it("Hello world !"))
 
 
-# The Hashtag Generator
-def generate_hashtag(s):
-    result = "#" + "".join(word.capitalize() for word in s.split())
-    if len(s) == 0 or len(result) > 140:
-        return False
-    return result
+# # The Hashtag Generator
+# def generate_hashtag(s):
+#     result = "#" + "".join(word.capitalize() for word in s.split())
+#     if len(s) == 0 or len(result) > 140:
+#         return False
+#     return result
 
 
-print(generate_hashtag("hello there thanks for trying my kata"))
-print(generate_hashtag("aaaaaabBbbbbbbc dddddddeEEEEEE ffffffGGGGGG"))
+# print(generate_hashtag("hello there thanks for trying my kata"))
+# print(generate_hashtag("aaaaaabBbbbbbbc dddddddeEEEEEE ffffffGGGGGG"))
+
+
+# Scramblies
+def scramble(s1, s2):
+    return all(s1.count(i) >= s2.count(i) for i in set(s2))
+
+
+print(scramble("rkqodlw", "world"))
+print(scramble("cedewaraaossoqqyt", "codewars"))
