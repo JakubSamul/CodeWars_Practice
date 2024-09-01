@@ -550,11 +550,19 @@
 # print(check_coupon("123", "123", "July 9, 2015", "July 2, 2015"))
 
 
-# Cat and Mouse - Easy Version
+# # Cat and Mouse - Easy Version
 
 
-def cat_mouse(x):
-    return "Escaped!" if x.count(".") > 3 else "Caught!"
+# def cat_mouse(x):
+#     return "Escaped!" if x.count(".") > 3 else "Caught!"
 
 
-print(cat_mouse("C....m"))
+# print(cat_mouse("C....m"))
+
+
+# Fibonacci
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a

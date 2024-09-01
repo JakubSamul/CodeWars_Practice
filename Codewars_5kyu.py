@@ -205,10 +205,11 @@
 # print(generate_hashtag("aaaaaabBbbbbbbc dddddddeEEEEEE ffffffGGGGGG"))
 
 
-# Scramblies
-def scramble(s1, s2):
-    return all(s1.count(i) >= s2.count(i) for i in set(s2))
+# # Scramblies
+# def scramble(s1, s2):
+#     return all(s1.count(i) >= s2.count(i) for i in set(s2))
 
 
-print(scramble("rkqodlw", "world"))
-print(scramble("cedewaraaossoqqyt", "codewars"))
+# print(scramble("rkqodlw", "world"))
+# print(scramble("cedewaraaossoqqyt", "codewars"))
+
