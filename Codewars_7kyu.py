@@ -560,9 +560,14 @@
 # print(cat_mouse("C....m"))
 
 
-# Fibonacci
-def fibonacci(n):
-    a, b = 0, 1
-    for _ in range(n):
-        a, b = b, a + b
-    return a
+# # Fibonacci
+# def fibonacci(n):
+#     a, b = 0, 1
+#     for _ in range(n):
+#         a, b = b, a + b
+#     return a
+
+
+# List Filtering
+def filter_list(l):
+    return [i for i in l if type(i) == int]
