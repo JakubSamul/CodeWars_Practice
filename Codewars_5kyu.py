@@ -213,3 +213,25 @@
 # print(scramble("rkqodlw", "world"))
 # print(scramble("cedewaraaossoqqyt", "codewars"))
 
+
+# Greed is Good
+def score(dice):
+    result = 0
+    for i in range(1, 7):
+        if dice.count(i) >= 3:
+            if i == 1:
+                result += 1000
+            else:
+                result += i * 100
+            # Usuwamy tylko trzy wystąpienia `i`
+            for _ in range(3):
+                dice.remove(i)
+    for i in dice:
+        if i == 1:
+            result += 100
+        elif i == 5:
+            result += 50
+    return result
+
+
+print(score([1, 1, 1, 3, 1]))  # 1100
