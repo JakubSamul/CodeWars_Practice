@@ -569,5 +569,21 @@
 
 
 # List Filtering
-def filter_list(l):
-    return [i for i in l if type(i) == int]
+# def filter_list(l):
+#     return [i for i in l if type(i) == int]
+
+
+# Print count and numbers
+def count_me(data):
+    count = {}
+    for char in data:
+        if char in count:
+            count[char] += 1
+        else:
+            count[char] = 1
+    result = []
+    for char, num in count.items():
+        result.append(f"{num}{char}")
+    return "".join(result)
+
+print(count_me('1123'))
