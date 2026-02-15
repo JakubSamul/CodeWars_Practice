@@ -575,15 +575,17 @@
 
 # Print count and numbers
 def count_me(data):
-    count = {}
-    for char in data:
-        if char in count:
-            count[char] += 1
-        else:
-            count[char] = 1
-    result = []
-    for char, num in count.items():
-        result.append(f"{num}{char}")
-    return "".join(result)
+    if not data or not data.isdigit():
+        return ""
+    ressult = ""
+    i = 0
+    while i < len(data):
+        count = 1
+        while i + 1 < len(data) and data[i] == data[i+1]:
+            count += 1
+            i += 1
+        ressult += str(count) + data[i]
+        i += 1
+    return ressult
 
 print(count_me('1123'))
