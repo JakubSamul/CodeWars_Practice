@@ -698,19 +698,37 @@
 
 
 # Find the missiong letter
-import string
+# import string
 
 
-def find_missing_letter(chars):
-    alphabet = (
-        string.ascii_lowercase
-        if chars[0].islower()
-        else string.ascii_uppercase
-    )
-    start = alphabet.index(chars[0])
-    for i, char in enumerate(chars):
-        if alphabet[start + i] != char:
-            return alphabet[start + i]
+# def find_missing_letter(chars):
+#     alphabet = (
+#         string.ascii_lowercase
+#         if chars[0].islower()
+#         else string.ascii_uppercase
+#     )
+#     start = alphabet.index(chars[0])
+#     for i, char in enumerate(chars):
+#         if alphabet[start + i] != char:
+#             return alphabet[start + i]
 
 
-print(find_missing_letter(["a", "b", "c", "d", "f"]))
+# print(find_missing_letter(["a", "b", "c", "d", "f"]))
+
+
+# Roman Numerals Encoder
+def solution(n):
+    val = [
+        1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1,
+    ]
+    syms = [
+        "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I",
+    ]
+    result = ""
+    i = 0
+    while n > 0:
+        for _ in range(n // val[i]):
+            result += syms[i]
+            n -= val[i]
+        i += 1
+    return result
